@@ -1,0 +1,11 @@
+# Local browser profiles created during rendering/debug checks.
+chrome-profile/
+chrome-debug-profile/
+
+# Local screenshots/debug outputs.
+render-check.png
+*.tmp
+
+# OS/editor noise.
+.DS_Store
+Thumbs.db
