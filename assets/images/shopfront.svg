@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 820" role="img" aria-label="Seng Soon Aircond shopfront illustration">
+  <defs>
+    <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#c9e9f7" />
+      <stop offset="1" stop-color="#f7fbfd" />
+    </linearGradient>
+    <linearGradient id="sign" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#eadfbd" />
+      <stop offset="1" stop-color="#c9b46e" />
+    </linearGradient>
+    <linearGradient id="road" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#66695f" />
+      <stop offset="1" stop-color="#3a3b36" />
+    </linearGradient>
+  </defs>
+  <rect width="1440" height="820" fill="url(#sky)" />
+  <path d="M0 170c150-50 235 14 348-17 109-30 185-110 336-83 142 25 174 104 304 64 122-38 214-32 324 26 41 22 82 33 128 32v178H0Z" fill="#fff" opacity=".9" />
+  <rect x="0" y="336" width="1440" height="286" fill="#e4d6bc" />
+  <rect x="160" y="260" width="1120" height="62" fill="#8f342c" />
+  <rect x="194" y="206" width="1048" height="74" fill="#b86d45" />
+  <rect x="212" y="228" width="1010" height="34" fill="#74392b" opacity=".58" />
+  <rect x="285" y="154" width="864" height="226" fill="url(#sign)" />
+  <path d="M285 154h864v26H285Z" fill="#d9c47f" />
+  <path d="M285 354h864v26H285Z" fill="#a88944" />
+  <text x="720" y="255" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="78" font-weight="800" fill="#112c3a">MITSUBISHI</text>
+  <text x="720" y="304" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#1d3b4b">HEAVY INDUSTRIES, LTD.</text>
+  <text x="720" y="364" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#f5f1de">SENG SOON AIR-COND &amp; REFRIGERATOR SERVICING</text>
+  <rect x="272" y="382" width="888" height="74" fill="#a32825" />
+  <text x="720" y="436" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="64" font-style="italic" font-weight="800" fill="#fff">Midea</text>
+  <rect x="323" y="456" width="780" height="178" fill="#decf9f" />
+  <rect x="382" y="494" width="178" height="140" fill="#415f68" />
+  <rect x="588" y="494" width="260" height="140" fill="#25353d" />
+  <rect x="876" y="494" width="164" height="140" fill="#415f68" />
+  <rect x="608" y="510" width="92" height="124" fill="#17252b" />
+  <rect x="726" y="510" width="100" height="124" fill="#17252b" />
+  <path d="M272 382h888v18H272Z" fill="#ecb045" opacity=".8" />
+  <rect x="250" y="456" width="70" height="178" fill="#96352e" />
+  <rect x="1103" y="456" width="70" height="178" fill="#96352e" />
+  <rect x="0" y="610" width="1440" height="210" fill="url(#road)" />
+  <path d="M0 640h1440" stroke="#f7f1dd" stroke-width="6" opacity=".75" />
+  <path d="M270 820 440 640M790 820l-44-180M1180 820 990 640" stroke="#f4e7b1" stroke-width="7" opacity=".72" />
+  <rect x="92" y="340" width="140" height="282" fill="#9d493c" />
+  <rect x="1210" y="322" width="230" height="300" fill="#d8c3a2" />
+  <rect x="1210" y="336" width="230" height="76" fill="#6ea1b4" />
+  <text x="1325" y="388" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700" fill="#174057">Restoran</text>
+  <rect x="32" y="430" width="136" height="192" fill="#57362f" />
+  <text x="100" y="492" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#f0e2ca">Salon</text>
+  <circle cx="1180" cy="160" r="22" fill="#5d7781" />
+  <rect x="1175" y="174" width="12" height="56" fill="#33444b" />
+</svg>

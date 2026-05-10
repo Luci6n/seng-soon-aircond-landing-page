@@ -105,12 +105,14 @@ select {
   width: 42px;
   height: 42px;
   flex: 0 0 auto;
-  display: grid;
-  place-items: center;
-  border-radius: var(--radius);
-  background: var(--sea);
-  color: #fff;
-  font-weight: 800;
+  display: block;
+  border-radius: 14px;
+  box-shadow: 0 8px 18px rgba(15, 95, 122, 0.16);
+}
+
+.brand-mark img {
+  width: 100%;
+  height: 100%;
 }
 
 .brand strong,
@@ -239,13 +241,13 @@ select {
 }
 
 .shopfront,
-.shopfront svg,
+.shopfront img,
 .hero-overlay {
   position: absolute;
   inset: 0;
 }
 
-.shopfront svg {
+.shopfront img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -574,6 +576,7 @@ h3 {
   border: 0;
   background: transparent;
   box-shadow: none;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
   mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
 }
 
@@ -607,13 +610,14 @@ h3 {
 }
 
 .brand-chip img {
-  width: 100%;
+  width: auto;
+  height: auto;
   max-width: 128px;
   max-height: 42px;
   object-fit: contain;
 }
 
-.brand-chip img[src*="Acson_International_logo"] {
+.brand-chip img[src$="acson.png"] {
   max-width: 150px;
   max-height: 48px;
   transform: scale(1.32);
@@ -943,6 +947,23 @@ details:not([open]) p {
   font-weight: 800;
 }
 
+.footer-map {
+  grid-column: 1 / -1;
+  overflow: hidden;
+  aspect-ratio: 16 / 7;
+  min-height: 360px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.footer-map iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+}
+
 .toast {
   position: fixed;
   right: 1rem;
@@ -1078,6 +1099,10 @@ details:not([open]) p {
   .status-strip {
     margin-top: -1.5rem;
   }
+
+  .footer-map {
+    grid-column: 1;
+  }
 }
 
 @media (max-width: 760px) {
@@ -1208,6 +1233,11 @@ details:not([open]) p {
   .footer-details {
     grid-template-columns: 1fr;
   }
+
+  .footer-map {
+    aspect-ratio: 4 / 3;
+    min-height: 340px;
+  }
 }
 
 @media (max-width: 430px) {
@@ -1265,6 +1295,7 @@ details:not([open]) p {
 @media (prefers-reduced-motion: reduce) {
   .brand-marquee {
     overflow: visible;
+    -webkit-mask-image: none;
     mask-image: none;
   }
 

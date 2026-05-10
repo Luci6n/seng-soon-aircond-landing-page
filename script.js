@@ -416,7 +416,8 @@ function setLanguage(language, shouldSave = false) {
 
   currentLanguage = selected;
   document.documentElement.lang = copy.htmlLang;
-  document.body.dataset.lang = selected;
+  document.body.dataset.currentLang = selected;
+  document.body.removeAttribute("data-lang");
 
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     const translated = copy.text[element.dataset.i18n];
@@ -428,11 +429,6 @@ function setLanguage(language, shouldSave = false) {
     element.textContent = translations[languageCode]?.heroCopy || translations.en.heroCopy;
     element.setAttribute("lang", translations[languageCode]?.htmlLang || translations.en.htmlLang);
     element.classList.toggle("hidden", languageCode !== selected);
-  });
-
-  document.querySelectorAll("[data-lang]").forEach((button) => {
-    button.classList.toggle("active", button.dataset.lang === selected);
-    button.setAttribute("aria-pressed", String(button.dataset.lang === selected));
   });
 
   if (languagePicker) {
@@ -632,12 +628,6 @@ languagePicker?.addEventListener("change", () => {
   navMenu?.classList.remove("open");
   navToggle?.setAttribute("aria-expanded", "false");
   if (menuLabel) menuLabel.textContent = translations[currentLanguage].openMenu;
-});
-
-document.querySelectorAll("[data-lang]").forEach((button) => {
-  button.addEventListener("click", () => {
-    setLanguage(button.dataset.lang, true);
-  });
 });
 
 document.querySelector("[data-copy-address]")?.addEventListener("click", async () => {
