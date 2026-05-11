@@ -1,0 +1,19 @@
+{
+  "name": "Seng Soon Air-Cond & Refrigerator Servicing",
+  "short_name": "Seng Soon Aircond",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#0f5f7a",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}
