@@ -542,8 +542,12 @@ function setupRevealAnimations() {
     return;
   }
 
-  document.body.classList.add("reveal-ready");
   items.forEach((item) => item.classList.add("reveal-item"));
+  items.forEach((item) => {
+    const rect = item.getBoundingClientRect();
+    if (rect.top < window.innerHeight * 0.98) item.classList.add("reveal-visible");
+  });
+  document.body.classList.add("reveal-ready");
 
   const observer = new IntersectionObserver(
     (entries) => {
@@ -553,10 +557,12 @@ function setupRevealAnimations() {
         observer.unobserve(entry.target);
       });
     },
-    { threshold: 0.14, rootMargin: "0px 0px -8% 0px" }
+    { threshold: 0.06, rootMargin: "0px 0px -8% 0px" }
   );
 
-  items.forEach((item) => observer.observe(item));
+  items.forEach((item) => {
+    if (!item.classList.contains("reveal-visible")) observer.observe(item);
+  });
 }
 
 function setupFaqAnimation() {

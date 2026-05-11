@@ -1062,13 +1062,11 @@ details:not([open]) p {
 
   body.reveal-ready .reveal-item {
     opacity: 0;
-    transform: translateY(28px);
-    transition: opacity 620ms ease, transform 620ms ease;
+    transition: opacity 650ms ease;
   }
 
   body.reveal-ready .reveal-item.reveal-visible {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
