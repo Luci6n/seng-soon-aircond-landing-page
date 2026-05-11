@@ -1060,12 +1060,12 @@ details:not([open]) p {
     animation-delay: 460ms;
   }
 
-  body.reveal-ready .reveal-item {
+  .reveal-item {
     opacity: 0;
     transition: opacity 650ms ease;
   }
 
-  body.reveal-ready .reveal-item.reveal-visible {
+  .reveal-item.reveal-visible {
     opacity: 1;
   }
 }

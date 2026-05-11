@@ -533,21 +533,20 @@ function showToast(message) {
 }
 
 function setupRevealAnimations() {
-  const items = document.querySelectorAll("main > .section");
+  const items = document.querySelectorAll(".reveal-item");
   if (
     !items.length ||
     !("IntersectionObserver" in window) ||
     window.matchMedia("(prefers-reduced-motion: reduce)").matches
   ) {
+    items.forEach((item) => item.classList.add("reveal-visible"));
     return;
   }
 
-  items.forEach((item) => item.classList.add("reveal-item"));
   items.forEach((item) => {
     const rect = item.getBoundingClientRect();
     if (rect.top < window.innerHeight * 0.98) item.classList.add("reveal-visible");
   });
-  document.body.classList.add("reveal-ready");
 
   const observer = new IntersectionObserver(
     (entries) => {
