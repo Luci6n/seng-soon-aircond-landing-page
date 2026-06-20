@@ -38,7 +38,7 @@ The site is designed to be deployed as a static site on Cloudflare Pages.
 Canonical URL:
 
 ```txt
-https://sengsoonaircond.pages.dev/
+https://sengsoonaircond.my/
 ```
 
-If a custom domain is added later, update the canonical URL, sitemap URL, structured data URL, and Open Graph image URL.
+Canonical metadata, sitemap URLs, structured data URLs, and Open Graph image URLs should use the custom `.my` domain.

@@ -1,10 +1,14 @@
-# Local browser profiles created during rendering/debug checks.
-chrome-profile/
-chrome-debug-profile/
+# Skill source notes and non-runtime docs.
+skill-dev-notes/
+temp/
 
-# Local screenshots/debug outputs.
-render-check.png
-*.tmp
+# Generated validation reports.
+reports/
+
+# Dependency and build output folders.
+node_modules/
+dist/
+build/
 
 # OS/editor noise.
 .DS_Store
