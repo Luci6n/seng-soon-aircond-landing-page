@@ -11,6 +11,7 @@ Use this workflow when creating or improving a landing page.
 - 3. Build The Page Structure
 - 4. Add Conversion Paths
 - 5. Add SEO/AEO/GEO Signals
+- 5A. Supporting Pages
 - 6. Verify
 
 ## 1. Understand The Page
@@ -66,6 +67,8 @@ project/
 +-- favicon.ico
 +-- favicon.png
 +-- apple-touch-icon.png
++-- icon-192.png
++-- icon-512.png
 +-- assets/
     +-- images/
     +-- brand/
@@ -203,6 +206,14 @@ Include:
 - FAQ answers
 - Visible business facts
 - Sitemap and robots
+
+Keep one value per fact across every template. `{{PHONE}}` is the human-readable number shown to visitors and used in schema; `{{PHONE_E164}}` is the same number in `+60...` form for `tel:` links only. `{{ADDRESS}}` and `{{OPENING_HOURS_SHORT}}` must match what the JSON-LD says. A phone number or opening time that differs between the footer, the hero, and the structured data is the NAP inconsistency this skill exists to prevent.
+
+## 5A. Supporting Pages
+
+`templates/privacy-notice.md` is a minimal starting point for a brochure site with analytics and a contact method. It is not legal advice and is not compliant as written. A real notice usually also needs the data controller's legal identity, the legal basis for processing, retention periods, the visitor's rights (access, correction, deletion, withdrawal of consent), and a cookie or consent mechanism wherever tracking runs. GDPR, the UK GDPR, and Malaysia's PDPA each add their own requirements.
+
+Tell the user plainly that the generated notice is a draft to be reviewed, and never describe a site as compliant on the strength of this template.
 
 ## 6. Verify
 

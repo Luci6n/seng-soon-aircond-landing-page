@@ -115,7 +115,10 @@ async function checkExternalUrl(target, source) {
       }
     });
 
-    if ([403, 405].includes(response.status)) {
+    // Some endpoints - notably Google Maps embed URLs - reject HEAD outright
+    // with a 404 even though the resource is fine, rather than the more
+    // correct 405. Retry with GET before trusting a non-2xx HEAD response.
+    if ([403, 404, 405].includes(response.status)) {
       response = await fetch(target, {
         method: "GET",
         redirect: "follow",
@@ -132,7 +135,12 @@ async function checkExternalUrl(target, source) {
 
     return result("fail", target, `HTTP ${response.status}`, source);
   } catch (error) {
-    return result("fail", target, error.message, source);
+    // A timeout, DNS failure, or refused connection means the link could not be
+    // verified from here. That is not the same as the link being broken: the
+    // host may be temporarily down, rate limiting this checker, or blocking its
+    // user agent. Report it as unverified so nobody removes a working link.
+    const reason = error.name === "AbortError" ? "No response within 10s" : error.message;
+    return result("warn", target, `Could not verify - ${reason}. Check manually before changing it.`, source);
   } finally {
     clearTimeout(timeout);
   }

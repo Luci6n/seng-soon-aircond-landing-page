@@ -69,6 +69,15 @@ if (manifestText) {
     checks.push(result("manifest has short_name", manifest.short_name ? "pass" : "warn"));
     checks.push(result("manifest has icons", icons.length > 0 ? "pass" : "warn", `${icons.length} icon(s).`));
     checks.push(result("manifest icon files exist", icons.every((icon) => localFileExists(icon.src)) ? "pass" : "fail"));
+
+    const iconSizes = new Set(icons.flatMap((icon) => String(icon.sizes || "").split(/\s+/)));
+    checks.push(
+      result(
+        "manifest has 192x192 and 512x512 icons",
+        iconSizes.has("192x192") && iconSizes.has("512x512") ? "pass" : "warn",
+        "Chrome's installability check expects both sizes."
+      )
+    );
     checks.push(result("manifest has theme_color", manifest.theme_color ? "pass" : "warn"));
     checks.push(result("site.webmanifest has no template placeholders", /\{\{[^}]+\}\}/.test(manifestText) ? "fail" : "pass"));
   } catch (error) {
@@ -78,6 +87,14 @@ if (manifestText) {
 
 for (const iconPath of ["favicon.ico", "favicon.png", "apple-touch-icon.png"]) {
   checks.push(result(`${iconPath} exists`, existsSync(path.join(projectRoot, iconPath)) ? "pass" : "warn"));
+}
+
+const llmsTxt = readIfExists("llms.txt");
+checks.push(result("llms.txt exists", llmsTxt ? "pass" : "warn", "Optional AI-crawler guidance file; not required."));
+if (llmsTxt) {
+  checks.push(result("llms.txt has an H1 title", /^#\s+\S/m.test(llmsTxt) ? "pass" : "fail"));
+  checks.push(result("llms.txt has a summary blockquote", /^>\s*\S/m.test(llmsTxt) ? "pass" : "warn"));
+  checks.push(result("llms.txt has no template placeholders", /\{\{[^}]+\}\}/.test(llmsTxt) ? "fail" : "pass"));
 }
 
 const passed = checks.filter((check) => check.status === "pass").length;

@@ -137,4 +137,8 @@ Answer-engine and generative-engine readiness improves when copy is:
 - Easy to quote or summarize.
 - Consistent with structured data.
 
+Lead with the answer: state what the business does, for whom, and where in the opening lines, before supporting detail. A short self-contained opening paragraph is easier for a person to skim and easier for an assistant to quote. This is a writing convention, not a documented ranking rule — do not present a specific word count to a client as a requirement.
+
 Good FAQ answers are short but complete. Put important facts in visible HTML, not only metadata.
+
+Keep genuinely time-sensitive facts (hours, pricing notes, service list) current, and show a visible last-updated date when the page or its facts change over time. AI systems weigh recency when choosing which sources to cite, but only claim a date that reflects a real edit.
