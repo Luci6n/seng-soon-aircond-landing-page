@@ -1,0 +1,26 @@
+# Seng Soon Air-Cond & Refrigerator Servicing
+
+> Local air conditioner shop in Taman Sungai Kapar Indah, Klang, Selangor, Malaysia. Sells, installs, services, washes and repairs air conditioners for homes, offices and shops in Klang, Kapar, Bukit Raja and Setia Alam.
+
+The business also sells aircond spare parts and buys or sells second-hand air conditioners in good condition, subject to stock availability. Brands handled include Daikin, Panasonic, Midea and Acson. Staff speak English, Malay and Chinese, and the site is published in all three languages. WhatsApp is the primary contact channel.
+
+Address: 24, Jalan Sungai Kapar Indah 3, Taman Sungai Kapar Indah, 42200 Klang, Selangor, Malaysia
+Phone / WhatsApp: +60 12-283 5522
+Hours: Monday to Friday 09:00-18:00, Saturday 09:00-17:00, Malaysia time (Sunday closed)
+
+This is a single-page site. The whole page is short enough to read directly.
+
+## Pages
+
+- [Seng Soon Air-Cond & Refrigerator Servicing](https://sengsoonaircond.my/): The complete site — services, opening hours, location, and frequently asked questions.
+
+## Sections
+
+- [Services](https://sengsoonaircond.my/#services): Aircond sales, installation, servicing, washing, repair, spare parts and second-hand units.
+- [Opening hours](https://sengsoonaircond.my/#hours): Weekly schedule with a live open/closed indicator in Malaysia time.
+- [Location](https://sengsoonaircond.my/#location): Shop address, map link and service areas.
+- [Answers](https://sengsoonaircond.my/#answers): Frequently asked questions about pricing, service areas, brands and booking.
+
+## Optional
+
+- [Sitemap](https://sengsoonaircond.my/sitemap.xml): XML sitemap for the site.
